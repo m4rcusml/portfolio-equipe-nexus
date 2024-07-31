@@ -1,0 +1,32 @@
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo menu .";
+  align-items: center;
+  background-color: transparent;
+  padding: 0 1em;
+}
+
+#logo {
+  grid-area: logo;
+}
+
+#menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 200ms;
+}
+
+#menu a:hover {
+  border-bottom: 3px solid rgba(46, 217, 255, 0.77);
+}

@@ -1,0 +1,79 @@
+section.com-fundo-pessoas {
+  background-image: url(../../../../assets/pessoas-fundo.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#divsection3 {
+  background: #04080b88;
+  min-height: 25em;
+  padding: 2em 1.2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "h1 h1" "p img";
+  gap: 1em;
+  position: relative;
+}
+
+#divsection3 h1 {
+  grid-area: h1;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  min-width: 300px;
+}
+
+#divsection3 p {
+  grid-area: p;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  min-width: 300px;
+  align-self: center;
+}
+
+#divsection3 .imgs {
+  grid-area: img;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+#divsection3>.imgs>.img {
+  width: 35%;
+  background-image: url(../../../../assets/pessoas-fundo.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#divsection3>.imgs>.img:first-of-type {
+  height: 10em;
+  background-size: 500%;
+  background-position: 20% 45%;
+}
+
+#divsection3>.imgs>.img:last-of-type {
+  height: 25em;
+  background-size: 500%;
+  background-position: 25% 45%;
+}
+
+@media (max-width: 768px) {
+  #divsection3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "h1" "p" "img";
+  }
+  #divsection3 .imgs {
+    padding: 0;
+  }
+  #divsection3>.imgs>.img:first-of-type {
+    height: 10em;
+  }
+  #divsection3>.imgs>.img:last-of-type {
+    height: 20em;
+  }
+}

@@ -1,0 +1,97 @@
+#presentation {
+  height: calc(100vh - var(--header-height));
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas: "." "title" "subtitle";
+  justify-items: center;
+  row-gap: 1em;
+  padding: 0 1em;
+  position: relative;
+}
+
+#presentation .shortlogo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-width: 300px;
+}
+
+#presentation h1 {
+  grid-area: title;
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+
+#presentation > div {
+  grid-area: subtitle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: white;
+}
+
+#presentation > div h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#what-is {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1.2em;
+  gap: 1em;
+  min-height: 18.75em;
+}
+
+.blue-blur {
+  width: 30%;
+  min-width: 180px;
+  min-height: 180px;
+  height: 30%;
+  border-radius: 18rem;
+  background: #2ED9FF;
+  filter: blur(220px);
+}
+
+.white-blur {
+  width: 30%;
+  height: 30%;
+  min-width: 180px;
+  min-height: 180px;
+  border-radius: 18rem;
+  background: white;
+  filter: blur(220px);
+}
+
+.white-blur.um {
+  position: absolute;
+  top: calc(var(--header-height)* -1);
+  left: 100px;
+  scale: 0.6;
+}
+
+.white-blur.dois {
+  position: absolute;
+  bottom: 15%;
+  right: 20%;
+  scale: 0.5;
+}
+
+.blue-blur.um {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  scale: 0.7;
+}
+
+.blue-blur.dois {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  scale: 0.8;
+}

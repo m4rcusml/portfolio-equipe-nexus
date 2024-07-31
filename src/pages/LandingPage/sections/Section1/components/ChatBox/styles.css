@@ -1,0 +1,19 @@
+.chatbox {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0.11%, rgba(0, 182, 223, 0.30) 95.81%);
+  box-shadow: 0px 8px 113.6px 0px rgba(0, 150, 184, 0.42);
+  backdrop-filter: blur(35px);
+  border-radius: 0.9rem;
+  border: 3px solid #FFF;
+
+  width: 55vw;
+  min-height: calc(55vw / (25 / 9));
+  min-height: 2em;
+  padding: 1em;
+  
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+}

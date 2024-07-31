@@ -1,0 +1,61 @@
+#softhouse-explained {
+  background-color: white;
+  min-height: 25em;
+  padding: 2em 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+#softhouse-explained h1 {
+  font-size: 2rem;
+  max-width: 75%;
+  min-width: 300px;
+}
+
+#softhouse-explained p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #134A56;
+  max-width: 68%;
+  min-width: 300px;
+}
+
+#softhouse-explained p span {
+  color: black;
+}
+
+#softhouse-explained>img {
+  min-width: 300px;
+  max-width: 100%;
+  width: 26%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  mask-mode: alpha;
+}
+
+.blue-backblur {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25em;
+  height: 25em;
+  border-radius: 25em;
+  background: #7FABB4;
+  filter: blur(25px);
+  transform: translateY(5em) translateX(5em);
+}
+
+@media screen and (max-width: 780px) {
+  #softhouse-explained>img {
+    align-self: flex-end;
+    position: relative;
+    scale: 1.1;
+    bottom: -1em;
+    right: -1em;
+    z-index: 1;
+  }
+}
