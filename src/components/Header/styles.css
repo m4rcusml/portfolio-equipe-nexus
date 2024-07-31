@@ -1,8 +1,8 @@
 #header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "logo menu .";
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "logo menu hamburguer" "menumobile menumobile menumobile";
   align-items: center;
   background-color: transparent;
   padding: 0 1em;
@@ -19,14 +19,58 @@
   gap: 10px;
 }
 
-#menu a {
+#menu a, #on-mobile a {
   color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-decoration: none;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom 200ms;
 }
 
-#menu a:hover {
+#menu a:hover, #on-mobile a:hover {
   border-bottom: 3px solid rgba(46, 217, 255, 0.77);
+}
+
+#menu-hamburguer {
+  grid-area: hamburguer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-self: flex-end;
+}
+
+#menu-hamburguer .icon {
+  animation: appear 500ms ;
+}
+
+#menu-hamburguer .reverse {
+  animation: disappear 500ms;
+}
+
+#on-mobile {
+  grid-area: menumobile;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes appear {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }

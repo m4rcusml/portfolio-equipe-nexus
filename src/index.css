@@ -29,7 +29,7 @@
 #root {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: var(--header-height) auto auto;
+  grid-template-rows: var(--header-height) auto auto auto;
   grid-template-areas: "header" "main" "footer";
   min-width: 320px;
   min-height: 100vh;
