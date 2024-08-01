@@ -6,8 +6,7 @@
     background-color: #fff;
     box-shadow: 0 0 20px #75E6FF;
     font-family: 'Inter', sans-serif;
-    max-height: 600px;
-    max-width: 400px
+    width: 240px;
 }
 
 .image-placeholder {
@@ -72,3 +71,4 @@
     margin-right: 10px;
     vertical-align: middle;
 }
+
