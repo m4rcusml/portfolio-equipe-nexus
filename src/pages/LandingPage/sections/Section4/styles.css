@@ -70,6 +70,10 @@
   justify-content: center;
 }
 
+.slick-list{
+  overflow:visible;
+}
+
 
 
 @media (max-width: 768px) {
