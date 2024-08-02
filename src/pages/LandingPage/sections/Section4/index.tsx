@@ -13,7 +13,16 @@ const data = [
         github: "https://github.com/johndoe",
         behance: "https://www.behance.net/johndoe",
         instagram: "https://www.instagram.com/johndoe",
-    }
+    },
+    {
+        image: "https://via.placeholder.com/150",
+        name: "John Biden",
+        isMember: true,
+        role: "Desenvolvedor Front-End",
+        github: "https://github.com/johndoe",
+        behance: "https://www.behance.net/johndoe",
+        instagram: "https://www.instagram.com/johndoe",
+    },
 ]
 
 export function Section4() {
