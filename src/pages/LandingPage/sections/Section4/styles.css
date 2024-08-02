@@ -1,68 +1,73 @@
 .section-4 {
-    height: auto;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    padding-inline: 1.2rem;
-    padding-block: 2.5rem;
-    text-align: center;
-    gap: 30px;
+  min-height: 25em;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding-inline: 1.2rem;
+  padding-block: 4rem;
+  text-align: center;
+  gap: 30px;
+  overflow: hidden;
+}
 
-  }
-  
-  .section4__top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .section4__title {
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
-    text-align: inherit;
-    max-width: 80vw;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-  
-  .highlight {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-  }
-  
-  .highlight::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0.3em;
-    background-image: url('../../../../assets/sublinhado.svg');
-    background-repeat: no-repeat;
-    border-radius: 0px 10px 10px 0px;
-    background-position: bottom 0px right 0px;
-    background-size: contain;
-    z-index: -1;
-  }
-  .teste{
-    width: 80vw;
-    margin: auto;
-  }
+.section4__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4__title {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: inherit;
+  max-width: 80vw;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.05em;
+  position: relative;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.3em;
+  background-image: url('../../../../assets/sublinhado.svg');
+  background-repeat: no-repeat;
+  border-radius: 0px 10px 10px 0px;
+  background-position: bottom 0px right 0px;
+  background-size: contain;
+  z-index: -1;
+}
+
+.slider-container {
+  width: 80vw;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 1em 2.5em;
+}
+
+.slider-container>.slick-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
-  
-  @media (max-width: 768px) {
-    .section-4 {
+@media (max-width: 768px) {
+  .section-4 {
       text-align: left;
-    }
-  
-
   }
-  
+}

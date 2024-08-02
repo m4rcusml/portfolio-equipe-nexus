@@ -6,12 +6,13 @@
     background-color: #fff;
     box-shadow: 0 0 20px #75E6FF;
     font-family: 'Inter', sans-serif;
-    width: 240px;
+    width: 300px; 
+    margin: 10px;
 }
 
 .image-placeholder {
-    width: 30%;
-    aspect-ratio: 2/2.2;
+    width: 100%;
+    height: auto;
     background-color: #d8d8d8;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -23,7 +24,7 @@
     align-items: flex-start;
 }
 
-.member_name {
+.card__name {
     font-size: 1.2em;
     color: #000000;
     margin: 0;
@@ -31,8 +32,7 @@
     font-weight: 900;
 }
 
-
-.member_function {
+.member_function, .service_title, .lead_name {
     font-size: 1em;
     color: #000000;
     margin: 0;
@@ -40,12 +40,12 @@
     font-weight: 600;
 }
 
-.social-links {
+.social-links, .service_list {
     list-style: none;
     padding: 0;
 }
 
-.social-links li {
+.social-links li, .service_list li {
     margin: 10px 0;
 }
 
@@ -72,3 +72,21 @@
     vertical-align: middle;
 }
 
+.project_description {
+    font-size: 0.9em;
+    color: #333333;
+    margin: 10px 0;
+    font-family: inherit;
+}
+
+.project_lead {
+    display: flex;
+    align-items: center;
+}
+
+.lead_photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

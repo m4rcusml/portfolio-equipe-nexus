@@ -4,41 +4,15 @@ import "slick-carousel/slick/slick-theme.css";
 import { Card } from '../../../../components/Card';
 import './styles.css';
 
-const banana = [
+const data = [
     {
-        name: 'Nome',
-        role: 'pog',
-        github: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        behance: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        instagram: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-    },
-    {
-        name: 'Nome',
-        role: 'pog',
-        github: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        behance: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        instagram: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-    },
-    {
-        name: 'Nome',
-        role: 'pog',
-        github: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        behance: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        instagram: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-    },
-    {
-        name: 'Nome',
-        role: 'pog',
-        github: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        behance: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        instagram: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-    },
-    {
-        name: 'Nome',
-        role: 'pog',
-        github: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        behance: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
-        instagram: 'https://github.com/Equipe-nexus/equipe-nexus-portifolio/blob/main/src/components/CardMembers/styles.css',
+        image: "https://via.placeholder.com/150",
+        name: "John Doe",
+        isMember: true,
+        role: "Desenvolvedor Front-End",
+        github: "https://github.com/johndoe",
+        behance: "https://www.behance.net/johndoe",
+        instagram: "https://www.instagram.com/johndoe",
     }
 ]
 
@@ -48,20 +22,42 @@ export function Section4() {
         dots: true,
         infinite: true,
         speed: 500,
-        slideToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     };
 
     return (
-        <div className="section-4">
-            <div className="section4__top">
-                <h1 className="section4__title">Conheça nossa <span className="highlight">Equipe</span></h1>
+        <section>
+            <div className="section-4">
+                <div className="section4__top">
+                    <h1 className="section4__title">Conheça nossa <span className="highlight">Equipe</span></h1>
+                </div>
+                <div className='slider-container'>
+                    <Slider {...settings}>
+                        {data.map((item, index) => (
+                            <Card
+                                key={index}
+                                image={item.image}
+                                name={item.name}
+                                isMember={item.isMember}
+                                role={item.role}
+                                github={item.github}
+                                behance={item.behance}
+                                instagram={item.instagram}
+                            />
+                        ))}
+                    </Slider>
+                </div>
             </div>
-            <div className='teste'>
-                <Slider {...settings}>
-                    {banana.map((banana) => <Card values={banana} />)}
-                </Slider>
-            </div>
-        </div>
+        </section>
     );
 }
