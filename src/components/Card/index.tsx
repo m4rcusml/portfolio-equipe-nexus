@@ -38,8 +38,11 @@ interface ProjectProps extends CommonProps {
 type CardProps = MemberProps | ServiceProps | ProjectProps;
 
 export function Card(props: CardProps) {
+
+  const cardClass = props.isService ? 'card service-card' : 'card';
+
   return (
-    <div className="card">
+    <div className={cardClass}>
       <img src={props.image} alt={props.name} className="image-placeholder" />
       <div className="card__container">
         <h1 className="card__name">{props.name}</h1>
@@ -75,7 +78,6 @@ export function Card(props: CardProps) {
 
         {props.isService && (
           <>
-            <h2 className="service_title">{props.serviceTitle}</h2>
             <ul className="service_list">
               {props.serviceList && props.serviceList.map((service, index) => (
                 <li key={index}>{service}</li>

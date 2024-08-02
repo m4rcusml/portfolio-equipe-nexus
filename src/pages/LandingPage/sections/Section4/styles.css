@@ -20,7 +20,7 @@
 }
 
 .section4__title {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 2rem;
   text-align: inherit;
   max-width: 80vw;
@@ -59,6 +59,12 @@
 }
 
 .slider-container>.slick-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-initialized .slick-slide{
   display: flex;
   align-items: center;
   justify-content: center;

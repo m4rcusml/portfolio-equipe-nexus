@@ -1,51 +1,92 @@
 .card {
-    padding: 20px;
-    border: 1px solid #e0e0e0;
+    color: black;
+    padding: 1.2em;
+    border: 1px solid #99999972;
     border-radius: 10px;
-    text-align: center;
     background-color: #fff;
-    box-shadow: 0 0 20px #75E6FF;
+    box-shadow: 0 0 10px #75E6FF;
     font-family: 'Inter', sans-serif;
-    width: 300px; 
-    margin: 10px;
+    width: 20vw;
+    aspect-ratio: 1/1.6;
+    margin: 1em;
+    box-sizing: border-box; 
+    transition: transform 0.3s ease;
+    gap: 1.2em;
 }
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card.service-card {
+    background: linear-gradient(to bottom, #ffffff52 , #00b6df6c 100%);
+    color: white;
+    box-shadow: none;
+}
+
+.card.service-card>.card__container{
+    align-items: center;
+    gap: 1.2em;
+}
+
+.card.service-card>.card__container>.card__name{
+    text-align: center;
+}
+
+.card.service-card>.card__container>.service_list{
+    list-style:inside;
+    text-align: left;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
 
 .image-placeholder {
     width: 100%;
-    height: auto;
+    min-width: 150px;
+    aspect-ratio: 1/1;
     background-color: #d8d8d8;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 
 .card__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
+    justify-content: center;
 }
 
 .card__name {
     font-size: 1.2em;
-    color: #000000;
+    width: 14ch;
+    color: inherit;
     margin: 0;
+    text-align: left;
     font-family: inherit;
     font-weight: 900;
 }
 
-.member_function, .service_title, .lead_name {
+.member_function,
+.service_title,
+.lead_name {
     font-size: 1em;
-    color: #000000;
+    color: inherit;
     margin: 0;
     font-family: inherit;
     font-weight: 600;
 }
 
-.social-links, .service_list {
+.social-links,
+.service_list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.social-links li, .service_list li {
+.social-links li,
+.service_list li {
     margin: 10px 0;
 }
 
@@ -89,4 +130,10 @@
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 50vw; 
+    }
 }
