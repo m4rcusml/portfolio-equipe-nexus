@@ -1,8 +1,8 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Card } from '../../../../components/Card';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './styles.css';
+import { useEffect, useState } from 'react';
 
 const data = [
     {
@@ -35,23 +35,23 @@ const data = [
 ]
 
 export function Section4() {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
+    const [slidePercentage, setSlidePercentage] = useState(33);
+    useEffect(() => {
+        const updateSlidePercentage = () => {
+            if (window.innerWidth < 768) {
+                setSlidePercentage(100); 
+            } else {
+                setSlidePercentage(33); 
             }
-        ]
-    };
+        };
+
+        window.addEventListener('resize', updateSlidePercentage);
+        updateSlidePercentage();
+
+        return () => {
+            window.removeEventListener('resize', updateSlidePercentage);
+        };
+    }, []);
 
     return (
         <section>
@@ -59,22 +59,32 @@ export function Section4() {
                 <div className="section4__top">
                     <h1 className="section4__title">Conheça nossa <span className="highlight">Equipe</span></h1>
                 </div>
-                <div className='slider-container'>
-                    <Slider {...settings}>
-                        {data.map((item, index) => (
-                            <Card
-                                key={index}
-                                image={item.image}
-                                name={item.name}
-                                isMember={item.isMember}
-                                role={item.role}
-                                github={item.github}
-                                behance={item.behance}
-                                instagram={item.instagram}
-                            />
-                        ))}
-                    </Slider>
-                </div>
+                <Carousel
+                    centerMode={true}
+                    showThumbs={false}
+                    showStatus={false}
+                    showIndicators={false}
+                    showArrows={true}
+                    interval={5000}
+                    className="slider-container"
+                    emulateTouch={true}
+                    swipeable={true}
+                    centerSlidePercentage={slidePercentage}
+                    infiniteLoop={true}
+                >
+                    {data.map((item, index) => (
+                        <Card
+                            key={index}
+                            image={item.image}
+                            name={item.name}
+                            isMember={item.isMember}
+                            role={item.role}
+                            github={item.github}
+                            behance={item.behance}
+                            instagram={item.instagram}
+                        />
+                    ))}
+                </Carousel>
             </div>
         </section>
     );
