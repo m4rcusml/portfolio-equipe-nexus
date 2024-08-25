@@ -1,0 +1,72 @@
+.Section7Container {
+    background: linear-gradient(to top, #297282 5%, #1d363b 30%, #297282 80%, #000);
+    min-height: 15em;
+    padding: 1.5em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.Contact{
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    gap: 1em;
+    background-image: url('../../../src/assets/long-logo.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-wrap: wrap;
+}
+
+.hightitle {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.ContactTitle {
+    font-size: 2rem;
+    color: white;
+}
+
+.bottomContactTitle {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.bottomContactTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2em;
+    background: linear-gradient(90deg, #ffffff, #2ED9FF 20%);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    color: white;
+    justify-content: space-evenly;
+    margin-block: 1.5em;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconText{
+    font-size: 1em;
+    color: white;
+}

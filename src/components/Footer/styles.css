@@ -1,0 +1,18 @@
+.FooterContainer {
+    background: linear-gradient(to top, #000 , #297282 90%);
+    min-height: 5em;
+    padding: 1.5em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+.FooterText{
+    color: white;
+    font-size: 1em;
+}
+.FooterTitle{
+    color: white;
+    font-size: 2em;
+}
