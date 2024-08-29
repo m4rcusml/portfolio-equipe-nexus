@@ -5,34 +5,58 @@ import './styles.css';
 import { useEffect, useState } from 'react';
 
 const data = [
-    {
-        image: 'https://via.placeholder.com/150',
-        name: "John Doe",
-        isMember: true,
-        role: "Desenvolvedor Front-End",
-        github: "https://github.com/johndoe",
-        behance: "https://www.behance.net/johndoe",
-        instagram: "https://www.instagram.com/johndoe",
-    },
-    {
-        image: "https://via.placeholder.com/150",
-        name: "John Biden",
-        isMember: true,
-        role: "Desenvolvedor Front-End",
-        github: "https://github.com/johndoe",
-        behance: "https://www.behance.net/johndoe",
-        instagram: "https://www.instagram.com/johndoe",
-    },
-    {
-        image: "https://via.placeholder.com/150",
-        name: "Casimiro",
-        isMember: true,
-        role: "Desenvolvedor Front-End",
-        github: "https://github.com/johndoe",
-        behance: "https://www.behance.net/johndoe",
-        instagram: "https://www.instagram.com/johndoe",
-    },
+  {
+    image: 'https://via.placeholder.com/150',
+    name: "John Doe",
+    isMember: true,
+    role: "Desenvolvedor Front-End",
+    github: "https://github.com/johndoe",
+    behance: "https://www.behance.net/johndoe",
+    instagram: "https://www.instagram.com/johndoe",
+  },
+  {
+    image: "https://via.placeholder.com/150",
+    name: "John Biden",
+    isMember: true,
+    role: "Desenvolvedor Front-End",
+    github: "https://github.com/johndoe",
+    behance: "https://www.behance.net/johndoe",
+    instagram: "https://www.instagram.com/johndoe",
+  },
+  {
+    image: "https://via.placeholder.com/150",
+    name: "Casimiro",
+    isMember: true,
+    role: "Desenvolvedor Front-End",
+    github: "https://github.com/johndoe",
+    behance: "https://www.behance.net/johndoe",
+    instagram: "https://www.instagram.com/johndoe",
+  },
+  {
+    image: "https://via.placeholder.com/150",
+    name: "Ibson",
+    isMember: true,
+    role: "Desenvolvedor Front-End",
+    github: "https://github.com/johndoe",
+    behance: "https://www.behance.net/johndoe",
+    instagram: "https://www.instagram.com/johndoe",
+  },
 ]
+
+export function Section4() {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
 
 export function Section4() {
     const [slidePercentage, setSlidePercentage] = useState(33);
