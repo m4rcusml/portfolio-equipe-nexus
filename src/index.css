@@ -55,3 +55,21 @@ section {
 footer {
   grid-area: footer;
 }
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.carousel-root {
+  width: 80vw;
+}
+
+@media (max-width: 768px) {
+  .carousel-root {
+    width: 100vw;
+  }
+}
+

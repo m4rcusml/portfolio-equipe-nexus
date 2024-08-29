@@ -49,46 +49,13 @@ const data = [
 ]
 
 export function Section5() {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  };
-
-  return (
-    <section>
-      <div className="section-5">
-        <div className="section5__top">
-          <h1 className="section5__title">Nossos <span className="bottomline">Serviços</span></h1>
-        </div>
-        <div className='slider-container'>
-          {/* <Slider {...settings}>
-                        
-                    </Slider> */}
-          {data.map((item, index) => (
-            <Card
-              key={index}
-              image={item.image}
-              name={item.name}
-              isService={item.isService}
-              serviceTitle={item.serviceTitle}
-              serviceList={item.serviceList}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section>
+            <div className="section-5">
+                <div className="section5__top">
+                    <h1 className="section5__title">Nossos <span className="bottomline">Serviços</span></h1>
+                </div>
+            </div>
+        </section>
+    );
 }

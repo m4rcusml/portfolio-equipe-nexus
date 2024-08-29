@@ -3,9 +3,10 @@
     padding: 1.2em;
     border: 1px solid #99999972;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #b30404;
     box-shadow: 0 0 10px #75E6FF;
     font-family: 'Inter', sans-serif;
+    min-width: 200px;
     width: 20vw;
     aspect-ratio: 1/1.6;
     margin: 1em;
@@ -44,7 +45,6 @@
 
 .image-placeholder {
     width: 100%;
-    min-width: 150px;
     aspect-ratio: 1/1;
     background-color: #d8d8d8;
     border-radius: 10px;
@@ -134,6 +134,8 @@
 
 @media (max-width: 768px) {
     .card {
+        font-size: 12px;
         width: 50vw; 
+        aspect-ratio: 1/1.8;
     }
 }
