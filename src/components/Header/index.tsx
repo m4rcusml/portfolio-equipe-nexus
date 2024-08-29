@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { List, X } from '@phosphor-icons/react';
 import Logo from '../../assets/logo.svg';
 import './styles.css';
